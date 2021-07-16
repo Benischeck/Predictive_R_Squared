@@ -13,7 +13,7 @@ This function takes three arguments - y_test, y_pred, X. y_test should be a pand
 
 # How it works
 
-In an [RPubs blog post] (https://rpubs.com/RatherBit/102428), Predictive R-Squared is discussed in terms of h ow it was implemented by Tom Hopper. This program uses the following general formula from that post to calculate Predictive R-Squared:
+In an [RPubs blog post](https://rpubs.com/RatherBit/102428), Predictive R-Squared is discussed in terms of h ow it was implemented by Tom Hopper. This program uses the following general formula from that post to calculate Predictive R-Squared:
 
       predictive R-squared = [1 - (PRESS / SST)] * 100
 
