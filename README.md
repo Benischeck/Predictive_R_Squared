@@ -7,3 +7,9 @@ This function will calculate the value of Predictive R-Squared. It is used as a 
 I plan to update this with a more bibliographic-style reference guide, as well as the generic formulas I reference in the description of the function. 
 
 I would love any comments/feedback about the function, particularly as they pertain to the accuracy of my interpretation of the formulas used herein. 
+
+
+
+Citations:
+
+Kutner, Michael H., et al. Applied Linear Regression Models. Fourth, McGraw-Hill Irwin, pp. 360, 361, 395.
