@@ -15,7 +15,7 @@ This function takes three arguments - y_test, y_pred, X. y_test should be a pand
 
 In an [RPubs blog post] (https://rpubs.com/RatherBit/102428), Predictive R-Squared is discussed in terms of h ow it was implemented by Tom Hopper. This program uses the following general formula from that post to calculate Predictive R-Squared:
 
-      `predictive R-squared = [1 - (PRESS / SST)] * 100`
+      predictive R-squared = [1 - (PRESS / SST)] * 100
 
 This formula requires the calculation of the Predicted Residual Error Sum of Squares (PRESS) statistic, and the Sum of Squares Total (SST). The function first calculates the PRESS statistic. According to *Kutner et al*, the formula for PRESS is as follows:
   
@@ -36,7 +36,7 @@ y-bar is simply the mean of the predictive variable of the test set. This scalar
 
 With PRESS and SST calculated, the Predictive R-Squared value can be realized. For the purposes of this function, I have chosen to ignore putting this value in percentage form, opting to leave it as a decimal, and so the resulting formula is as follows:
 
-      `predictive R-squared = [1 - (PRESS / SST)]`
+      predictive R-squared = [1 - (PRESS / SST)]
 
 
 
