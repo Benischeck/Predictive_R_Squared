@@ -43,17 +43,24 @@ def pred_r_sq(y_test, y_pred, X):
         - https://stackoverflow.com/questions/23926496/computing-the-trace-of-a-hat-matrix-from-and-independent-variable-matrix-with-a
     
     """
+    
+    #Import pandas and numpy modules
+    from pandas import DataFrame
+    from pandas import Series
+    from numpy import linalg
+    from numpy import diagonal
+    
     #Calculate the ordinary residuals. These will feed forward into deleted
     #  residuals.
-    ordinary_residuals = pd.DataFrame()
+    ordinary_residuals = DataFrame()
     ordinary_residuals = y_pred - y_test
     
     #Calculate the diagonal of the hat matrix. This will feed forward into the 
     #   deleted residuals.
-    hat = X.dot(np.linalg.inv(X.T.dot(X)).dot(X.T))
-    hat_diag = np.diagonal(hat)
+    hat = X.dot(linalg.inv(X.T.dot(X)).dot(X.T))
+    hat_diag = diagonal(hat)
     #Subset hat matrix to indices from test set
-    hat_diag_df = pd.Series(hat_diag)
+    hat_diag_df = Series(hat_diag)
     indices = y_pred.index.values.tolist()
     hat_diag_df = hat_diag_df.take(indices = indices)
     
@@ -63,7 +70,7 @@ def pred_r_sq(y_test, y_pred, X):
     
     #Calculate PRESS. This will feed forward into the Predictive R-Squared
     #   formula.
-    deleted_residuals_df = pd.DataFrame(deleted_residuals, columns = ['deleted_residuals'])
+    deleted_residuals_df = DataFrame(deleted_residuals, columns = ['deleted_residuals'])
     PRESS = deleted_residuals_df['deleted_residuals']**2
     PRESS = sum(PRESS)
     
