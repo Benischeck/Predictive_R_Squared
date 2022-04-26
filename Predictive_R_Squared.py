@@ -76,7 +76,7 @@ def pred_r_sq(y_test, y_pred, X):
     
     #Calculate SST. This will feed forward into the Predictive R-Squared formula.
     y_test_mean = sum(y_test) / len(y_test)
-    SST = sum((y_pred -y_test_mean)**2)
+    SST = sum((y_test - y_test_mean)**2)
     
     # Calculate Predictive R-Squared
     PRS = ((1-(PRESS/SST)))
