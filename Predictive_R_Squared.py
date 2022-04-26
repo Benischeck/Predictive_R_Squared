@@ -41,6 +41,7 @@ def pred_r_sq(y_test, y_pred, X):
         - https://blog.minitab.com/en/adventures-in-statistics-2/multiple-regession-analysis-use-adjusted-r-squared-and-predicted-r-squared-to-include-the-correct-number-of-variables
         - https://online.stat.psu.edu/stat501/lesson/10/10.5
         - https://stackoverflow.com/questions/23926496/computing-the-trace-of-a-hat-matrix-from-and-independent-variable-matrix-with-a
+        - https://stats.stackexchange.com/questions/208242/hat-matrix-and-leverages-in-classical-multiple-regression
     
     """
     
