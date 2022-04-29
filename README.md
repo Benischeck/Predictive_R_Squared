@@ -58,4 +58,6 @@ Additional resources for PRESS statistic - https://online.stat.psu.edu/stat501/l
 
 Additional resources on Predictive R-Squared - https://blog.minitab.com/en/adventures-in-statistics-2/multiple-regession-analysis-use-adjusted-r-squared-and-predicted-r-squared-to-include-the-correct-number-of-variables
 
+Additional resources on the Hat Matrix from a mathematical standpoint - https://www.jstor.org/stable/2683469    ,    https://stats.stackexchange.com/questions/208242/hat-matrix-and-leverages-in-classical-multiple-regression
+
 
