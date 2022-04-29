@@ -2,7 +2,9 @@ def pred_r_sq(y_test, y_pred, X):
     """
     Calculates Predictive R-Squared.
     
-    Required Arguments: (y_test, y_pred, X)
+    Required Arguments: (y_train, y_test, y_pred, X)
+    
+    y_train - A pandas series derived from the scikitlearn train_test_split module.
     
     y_test - A pandas series derived from the scikitlearn train_test_split module.
     
@@ -25,7 +27,7 @@ def pred_r_sq(y_test, y_pred, X):
     is squared, and then the sum of the series is taken to return a scalar, PRESS.
 
     Next up is the calculation of Sum of Squares Total (SST), which is calculated 
-    as the summation of (y_pred - y_test_mean)**2. This is used in the final 
+    as the summation of (y_pred - y_train_mean)**2. This is used in the final 
     formula for calculating Predictive R-Squared.
     
     Finally, Predictive R-Squared is calculated as 1-(PRESS/SST). This program
@@ -76,8 +78,8 @@ def pred_r_sq(y_test, y_pred, X):
     PRESS = sum(PRESS)
     
     #Calculate SST. This will feed forward into the Predictive R-Squared formula.
-    y_test_mean = sum(y_test) / len(y_test)
-    SST = sum((y_test - y_test_mean)**2)
+    y_train_mean = sum(y_train) / len(y_train)
+    SST = sum((y_test - y_train_mean)**2)
     
     # Calculate Predictive R-Squared
     PRS = ((1-(PRESS/SST)))
